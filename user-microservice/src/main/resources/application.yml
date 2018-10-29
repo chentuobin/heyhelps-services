@@ -1,0 +1,39 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: users-microservice
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:                          
+    url: jdbc:mysql://localhost:3306/heyhelps
+    username: root
+    password: Tgbyujhmn1
+    driver-class-name: com.mysql.jdbc.Driver
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch.youran.persistence: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    #securePortEnabled: true
+    #nonSecurePortEnabled: false
+    #securePort: 8443
+    #hostName: u5soft.com
+    #secureVirtualHostName: microservice-provider-user
+    #statusPageUrl: https://u5soft.com:8443/info
+    #healthCheckUrl: https://u5soft.com:8443/health
+    #homePageUrl: https://u5soft.com:8443
+    
+#ribbon:
+  #IsSecure: true
